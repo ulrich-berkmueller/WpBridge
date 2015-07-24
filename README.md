@@ -1,16 +1,10 @@
 # MockeryWPBridge
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/gwa/MockeryWPBridge.svg?style=flat-square)](https://packagist.org/packages/gwa/MockeryWPBridge)
-[![Total Downloads](https://img.shields.io/packagist/dt/gwa/MockeryWPBridge.svg?style=flat-square)](https://packagist.org/packages/gwa/MockeryWPBridge)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/gwa/mockery-wp-bridge.svg?style=flat-square)](https://packagist.org/packages/gwa/mockery-wp-bridge)
+[![Total Downloads](https://img.shields.io/packagist/dt/gwa/mockery-wp-bridge.svg?style=flat-square)](https://packagist.org/packages/gwa/mockery-wp-bridge)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 
 ## Master
-
-[![Build Status](https://img.shields.io/travis/gwa/MockeryWPBridge/master.svg?style=flat-square)](https://travis-ci.org/gwa/MockeryWPBridge)
-[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/gwa/MockeryWPBridge.svg?style=flat-square)](https://scrutinizer-ci.com/g/gwa/MockeryWPBridge/code-structure)
-[![Quality Score](https://img.shields.io/scrutinizer/g/gwa/MockeryWPBridge.svg?style=flat-square)](https://scrutinizer-ci.com/g/gwa/MockeryWPBridge)
-
-## Develop
 
 [![Build Status](https://img.shields.io/travis/gwa/MockeryWPBridge/master.svg?style=flat-square)](https://travis-ci.org/gwa/MockeryWPBridge)
 [![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/gwa/MockeryWPBridge.svg?style=flat-square)](https://scrutinizer-ci.com/g/gwa/MockeryWPBridge/code-structure)
