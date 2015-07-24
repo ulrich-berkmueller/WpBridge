@@ -4,7 +4,7 @@ namespace Gwa\Wordpress\MockeryWPBridge;
 use Gwa\Wordpress\MockeryWPBridge\Contracts\WPBridgeInterface;
 use Mockery;
 
-class MockWPBridge implements WPBridgeInterface
+class MockeryWPBridge implements WPBridgeInterface
 {
     /**
      * Mockery instance.
