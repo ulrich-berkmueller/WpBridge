@@ -1,0 +1,52 @@
+{
+    "name"       : "gwa/MockeryWPBridge",
+    "type"       : "library",
+    "description": "MockeryWPBridge is a simple bridge to mock all wordpress function.",
+    "keywords"   : [
+        ":keywords"
+    ],
+    "license"    : "MIT",
+    "homepage"   : "https://github.com/gwa/MockeryWPBridge",
+    "support"    : {
+        "issues"      : "https://github.com/gwa/MockeryWPBridge/issues",
+        "source"      : "https://github.com/gwa/MockeryWPBridge"
+    },
+    "authors"    : [
+        {
+            "name"    : "Great White Ark",
+            "homepage": "http://www.greatwhiteark.com",
+            "role"    : "Developer"
+        }
+    ],
+    "require": {
+        "php"                                          : ">=5.4.0"
+    },
+    "require-dev": {
+        "fabpot/php-cs-fixer"                          : "~1.9",
+        "mockery/mockery"                              : "~0.9.4",
+        "phpunit/phpunit"                              : "~4.6.4",
+        "scrutinizer/ocular"                           : "~1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Gwa\\Wordpress\\MockeryWPBridge\\"        : "src/Gwa/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Gwa\\Wordpress\\MockeryWPBridge\\Tests\\" : "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master"                               : "1.0.0-dev"
+        }
+    },
+    "scripts": {
+        "test"                                         : "phpunit",
+        "check-cs"                                     : "php-cs-fixer.phar fix -v --dry-run",
+        "fix-cs"                                       : "php-cs-fixer.phar fix"
+    },
+    "minimum-stability"                                : "dev",
+    "prefer-stable"                                    : true
+}
