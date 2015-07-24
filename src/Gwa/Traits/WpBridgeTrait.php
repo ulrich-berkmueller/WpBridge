@@ -20,7 +20,7 @@ trait WpBridgeTrait
      *
      * @param WPBridgeInterface $wpbridge
      *
-     * @return \Gwa\Wordpress\MockeryWPBridge\Contracts\WPBridgeInterface
+     * @return WpBridgeTrait
      */
     public function setWPBridge(WPBridgeInterface $wpbridge)
     {

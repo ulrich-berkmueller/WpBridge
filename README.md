@@ -42,7 +42,7 @@ Or you like to use a trait, than set ```WpBridgeTrait``` in a class.
 ```php
 use Gwa\Wordpress\MockeryWPBridge\Traits\WpBridgeTrait;
 
-class TestClass 
+class TestClass
 {
     use WpBridgeTrait;
 
