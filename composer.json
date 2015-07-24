@@ -3,7 +3,9 @@
     "type"       : "library",
     "description": "MockeryWPBridge is a simple bridge to mock all wordpress function.",
     "keywords"   : [
-        ":keywords"
+        "wordpress",
+        "mock",
+        "mockery",
     ],
     "license"    : "MIT",
     "homepage"   : "https://github.com/gwa/MockeryWPBridge",
