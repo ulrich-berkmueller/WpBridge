@@ -20,8 +20,42 @@ $ composer require gwa/mockery-wp-bridge
 
 ## Usage
 
+First init ```MockeryWPBridge``` class.
+
+```php
+$bridge = new \Gwa\Wordpress\MockeryWPBridge\MockeryWPBridge();
+```
+
+Now it allows us to use a class to call methods in the global namespace.
+Methods should be called in camelcase.
+
 ``` php
-TODO
+// To call
+wp_get_attachment_image_src(...);
+
+// use
+$bridge->wpGetAttachmentImageSrc(...);
+```
+
+Or you like to use a trait, than set ```WpBridgeTrait``` in a class.
+
+```php
+use Gwa\Wordpress\MockeryWPBridge\Traits\WpBridgeTrait;
+
+class TestClass 
+{
+    use WpBridgeTrait;
+
+    public function testFunc()
+    {
+        $img = $this->getWPBridge()->wpGetAttachmentImageSrc(...);
+
+        ...
+    }
+}
+
+$test = new TestClass();
+$test->setWPBridge($bridge);
 ```
 
 ## Change log
