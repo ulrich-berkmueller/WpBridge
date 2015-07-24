@@ -1,5 +1,5 @@
 {
-    "name"       : "gwa/MockeryWPBridge",
+    "name"       : "gwa/mockery-wp-bridge",
     "type"       : "library",
     "description": "MockeryWPBridge is a simple bridge to mock all wordpress function.",
     "keywords"   : [

@@ -21,7 +21,7 @@
 Via Composer
 
 ``` bash
-$ composer require gwa/MockeryWPBridge
+$ composer require gwa/mockery-wp-bridge
 ```
 
 ## Usage
