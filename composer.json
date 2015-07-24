@@ -5,7 +5,7 @@
     "keywords"   : [
         "wordpress",
         "mock",
-        "mockery",
+        "mockery"
     ],
     "license"    : "MIT",
     "homepage"   : "https://github.com/gwa/MockeryWPBridge",
