@@ -35,6 +35,6 @@ class WPBridge implements WPBridgeInterface
      */
     public function camelToUnderscore($string)
     {
-        return strtolower(preg_replace('/([a-z])([A-Z])/', '$1_$2', $string));
+        return strtolower(preg_replace('/([a-z])([A-Z0-9])/', '$1_$2', $string));
     }
 }
