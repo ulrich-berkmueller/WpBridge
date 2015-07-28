@@ -48,14 +48,14 @@ class TestClass
 
     public function testFunc()
     {
-        $img = $this->getWPBridge()->wpGetAttachmentImageSrc(...);
+        $img = $this->getWpBridge()->wpGetAttachmentImageSrc(...);
 
         ...
     }
 }
 
 $test = new TestClass();
-$test->setWPBridge($bridge);
+$test->setWpBridge($bridge);
 ```
 
 ## Change log
