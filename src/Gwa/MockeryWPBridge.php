@@ -97,7 +97,7 @@ class MockeryWpBridge implements WpBridgeInterface
     public function mock()
     {
         if (!isset($this->mock)) {
-            $this->mock = Mockery::mock('WPBridge');
+            $this->mock = Mockery::mock('WpBridge');
         }
 
         return $this->mock;
