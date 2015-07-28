@@ -10,7 +10,7 @@ class WpBridgeTraitTest extends \PHPUnit_Framework_TestCase
 
     public function testTraitSetWpBridge()
     {
-        $this->setWPBridge(new MockeryWpBridge());
+        $this->setWpBridge(new MockeryWpBridge());
 
         $this->assertInstanceOf('Gwa\Wordpress\MockeryWpBridge\Contracts\WpBridgeInterface', $this->getWpBridge());
     }
@@ -19,11 +19,11 @@ class WpBridgeTraitTest extends \PHPUnit_Framework_TestCase
     {
         $outside = new TestClass();
 
-        $outside->setWPBridge(new MockeryWpBridge());
+        $outside->setWpBridge(new MockeryWpBridge());
 
         $this->assertInstanceOf('Gwa\Wordpress\MockeryWpBridge\Contracts\WpBridgeInterface', $outside->getWpBridge());
 
-        (new TestClass())->setWPBridge(new MockeryWpBridge())->init();
+        (new TestClass())->setWpBridge(new MockeryWpBridge())->init();
     }
 }
 

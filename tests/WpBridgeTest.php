@@ -1,13 +1,13 @@
 <?php
 namespace Gwa\Wordpress\MockeryWpBridge\Tests;
 
-use Gwa\Wordpress\MockeryWpBridge\WPBridge;
+use Gwa\Wordpress\MockeryWpBridge\WpBridge;
 
 class WpBridgeTest extends \PHPUnit_Framework_TestCase
 {
     public function testCamelToUnderscore()
     {
-        $bridge = new WPBridge();
+        $bridge = new WpBridge();
         $this->assertEquals('foo_bar', $bridge->camelToUnderscore('fooBar'));
         $this->assertEquals('wp_get_attachment_image_src', $bridge->camelToUnderscore('wpGetAttachmentImageSrc'));
         $this->assertEquals('__', $bridge->camelToUnderscore('__'));
@@ -16,7 +16,7 @@ class WpBridgeTest extends \PHPUnit_Framework_TestCase
 
     public function testCallGlobalFunction()
     {
-        $bridge = new WPBridge();
+        $bridge = new WpBridge();
         $result = $bridge->strRepeat('##', 2);
         $this->assertEquals('####', $result);
 
