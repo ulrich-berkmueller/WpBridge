@@ -1,4 +1,4 @@
-# MockeryWPBridge
+# MockeryWpBridge
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/gwa/mockery-wp-bridge.svg?style=flat-square)](https://packagist.org/packages/gwa/mockery-wp-bridge)
 [![Total Downloads](https://img.shields.io/packagist/dt/gwa/mockery-wp-bridge.svg?style=flat-square)](https://packagist.org/packages/gwa/mockery-wp-bridge)
@@ -20,10 +20,10 @@ $ composer require gwa/mockery-wp-bridge
 
 ## Usage
 
-First init ```MockeryWPBridge``` class.
+First init ```MockeryWpBridge``` class.
 
 ```php
-$bridge = new \Gwa\Wordpress\MockeryWPBridge\MockeryWPBridge();
+$bridge = new \Gwa\Wordpress\MockeryWpBridge\MockeryWpBridge();
 ```
 
 Now it allows us to use a class to call methods in the global namespace.
@@ -40,7 +40,7 @@ $bridge->wpGetAttachmentImageSrc(...);
 Or you like to use a trait, than set ```WpBridgeTrait``` in a class.
 
 ```php
-use Gwa\Wordpress\MockeryWPBridge\Traits\WpBridgeTrait;
+use Gwa\Wordpress\MockeryWpBridge\Traits\WpBridgeTrait;
 
 class TestClass
 {
