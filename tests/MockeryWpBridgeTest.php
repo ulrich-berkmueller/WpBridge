@@ -8,7 +8,7 @@ class MockeryWpBridgeTest extends \PHPUnit_Framework_TestCase
     public function testGetMock()
     {
         $bridge = new MockeryWpBridge();
-        $this->assertInstanceOf('\Mockery_0__WPBridge', $bridge->mock());
+        $this->assertInstanceOf('\Mockery_0__WpBridge', $bridge->mock());
     }
 
     public function testMockFunction()
