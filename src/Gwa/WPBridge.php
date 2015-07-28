@@ -1,7 +1,7 @@
 <?php
-namespace Gwa\Wordpress\MockeryWPBridge;
+namespace Gwa\Wordpress\MockeryWpBridge;
 
-use Gwa\Wordpress\MockeryWPBridge\Contracts\WPBridgeInterface;
+use Gwa\Wordpress\MockeryWpBridge\Contracts\WpBridgeInterface;
 
 /**
  * Allows us to use a class to call methods in the global namespace.
@@ -12,7 +12,7 @@ use Gwa\Wordpress\MockeryWPBridge\Contracts\WPBridgeInterface;
  * use
  * $bridge->wpGetAttachmentImageSrc(...);
  */
-class WPBridge implements WPBridgeInterface
+class WpBridge implements WpBridgeInterface
 {
     /**
      * Magic call on all camel wordpress functions.

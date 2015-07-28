@@ -1,10 +1,10 @@
 <?php
-namespace Gwa\Wordpress\MockeryWPBridge;
+namespace Gwa\Wordpress\MockeryWpBridge;
 
-use Gwa\Wordpress\MockeryWPBridge\Contracts\WPBridgeInterface;
+use Gwa\Wordpress\MockeryWpBridge\Contracts\WpBridgeInterface;
 use Mockery;
 
-class MockeryWPBridge implements WPBridgeInterface
+class MockeryWpBridge implements WpBridgeInterface
 {
     /**
      * Mockery instance.
