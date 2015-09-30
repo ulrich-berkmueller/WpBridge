@@ -1,6 +1,6 @@
 # Changelog
 
-All Notable changes to `MockeryWPBridge` will be documented in this file
+All Notable changes to `MockeryWpBridge` will be documented in this file
 
 ## NEXT - YYYY-MM-DD
 
