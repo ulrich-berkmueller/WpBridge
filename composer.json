@@ -1,17 +1,17 @@
 {
     "name"       : "gwa/mockery-wp-bridge",
     "type"       : "library",
-    "description": "MockeryWPBridge is a simple bridge to mock all wordpress function.",
+    "description": "MockeryWpBridge is a simple bridge to mock all wordpress function.",
     "keywords"   : [
         "wordpress",
         "mock",
         "mockery"
     ],
     "license"    : "MIT",
-    "homepage"   : "https://github.com/gwa/MockeryWPBridge",
+    "homepage"   : "https://github.com/gwa/MockeryWpBridge",
     "support"    : {
-        "issues"      : "https://github.com/gwa/MockeryWPBridge/issues",
-        "source"      : "https://github.com/gwa/MockeryWPBridge"
+        "issues"      : "https://github.com/gwa/MockeryWpBridge/issues",
+        "source"      : "https://github.com/gwa/MockeryWpBridge"
     },
     "authors"    : [
         {
@@ -26,7 +26,7 @@
     },
     "require-dev": {
         "fabpot/php-cs-fixer"                          : "~1.10",
-        "phpunit/phpunit"                              : "~4.6.4",
+        "phpunit/phpunit"                              : "~4.8.9",
         "scrutinizer/ocular"                           : "~1.1"
     },
     "autoload": {
@@ -41,7 +41,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master"                               : "1.1.0-dev"
+            "dev-master"                               : "1.1.1-dev"
         }
     },
     "scripts": {

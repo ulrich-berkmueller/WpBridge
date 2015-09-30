@@ -6,9 +6,9 @@
 
 ## Master
 
-[![Build Status](https://img.shields.io/travis/gwa/MockeryWPBridge/master.svg?style=flat-square)](https://travis-ci.org/gwa/MockeryWPBridge)
-[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/gwa/MockeryWPBridge.svg?style=flat-square)](https://scrutinizer-ci.com/g/gwa/MockeryWPBridge/code-structure)
-[![Quality Score](https://img.shields.io/scrutinizer/g/gwa/MockeryWPBridge.svg?style=flat-square)](https://scrutinizer-ci.com/g/gwa/MockeryWPBridge)
+[![Build Status](https://img.shields.io/travis/gwa/MockeryWpBridge/master.svg?style=flat-square)](https://travis-ci.org/gwa/MockeryWpBridge)
+[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/gwa/MockeryWpBridge.svg?style=flat-square)](https://scrutinizer-ci.com/g/gwa/MockeryWpBridge/code-structure)
+[![Quality Score](https://img.shields.io/scrutinizer/g/gwa/MockeryWpBridge.svg?style=flat-square)](https://scrutinizer-ci.com/g/gwa/MockeryWpBridge)
 
 ## Install
 
