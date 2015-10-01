@@ -19,8 +19,6 @@ trait WpBridgeTrait
      * Set MockeryWpBridge.
      *
      * @param WpBridgeInterface $wpbridge
-     *
-     * @return WpBridgeTrait
      */
     public function setWpBridge(WpBridgeInterface $wpbridge)
     {

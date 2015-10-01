@@ -167,7 +167,7 @@ class MockeryWpBridge implements WpBridgeInterface
      * @param int      $prio
      * @param int      $numVars
      *
-     * @return Object
+     * @return \stdClass
      */
     private function add($filterName, $filterCall, $prio, $numVars)
     {
