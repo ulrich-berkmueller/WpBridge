@@ -53,6 +53,34 @@ class MockeryWpBridgeTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('test', $bridge->__('test', 'MockTest'));
     }
 
+    public function testAddFilter()
+    {
+        $bridge = new MockeryWpBridge();
+        $bridge->addFilter('network_admin_url', [$this, 'testGetText'], 1, 1);
+
+        $filters = $bridge->getAddedFilters();
+
+        $this->assertEquals(1, count($filters));
+        $this->assertEquals(1, $filters[0]->prio);
+        $this->assertEquals(1, $filters[0]->numvars);
+        $this->assertEquals('network_admin_url', $filters[0]->filtername);
+        $this->assertInternalType('array', $filters[0]->callback);
+    }
+
+    public function testAddAction()
+    {
+        $bridge = new MockeryWpBridge();
+        $bridge->addAction('network_admin_url', [$this, 'testGetText'], 1, 1);
+
+        $actions = $bridge->getAddedActions();
+
+        $this->assertEquals(1, count($actions));
+        $this->assertEquals(1, $actions[0]->prio);
+        $this->assertEquals(1, $actions[0]->numvars);
+        $this->assertEquals('network_admin_url', $actions[0]->filtername);
+        $this->assertInternalType('array', $actions[0]->callback);
+    }
+
     public function testShortcodeAtts()
     {
         $atts = [

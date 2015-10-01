@@ -14,11 +14,25 @@ class MockeryWpBridge implements WpBridgeInterface
     private $mock;
 
     /**
-     * All shortcodes
+     * All shortcodes.
      *
      * @var array
      */
     private $shortcodes = [];
+
+    /**
+     * All filters.
+     *
+     * @var array
+     */
+    private $filters = [];
+
+    /**
+     * All actions.
+     *
+     * @var array
+     */
+    private $actions = [];
 
     /* -------- */
 
@@ -32,6 +46,8 @@ class MockeryWpBridge implements WpBridgeInterface
     public function addShortcode($tag, $func)
     {
         $this->shortcodes[$tag] = $func;
+
+        return $this;
     }
 
     /**
@@ -85,6 +101,83 @@ class MockeryWpBridge implements WpBridgeInterface
     public function __($text, $domain)
     {
         return $text;
+    }
+
+    /* -------- */
+
+    /**
+     * Wordpress mock on add_filter func.
+     *
+     * @param string   $filterName
+     * @param callback $filterCall
+     * @param int      $prio
+     * @param int      $numVars
+     *
+     * @return self
+     */
+    public function addFilter($filterName, $filterCall, $prio, $numVars)
+    {
+        $this->filters[] = $this->add($filterName, $filterCall, $prio, $numVars);
+
+        return $this;
+    }
+
+    /**
+     * Get all added filters.
+     *
+     * @return array
+     */
+    public function getAddedFilters()
+    {
+        return $this->filters;
+    }
+
+    /**
+     * Wordpress mock on add_action func.
+     *
+     * @param string   $filterName
+     * @param callback $filterCall
+     * @param int      $prio
+     * @param int      $numVars
+     *
+     * @return self
+     */
+    public function addAction($filterName, $filterCall, $prio, $numVars)
+    {
+        $this->actions[] = $this->add($filterName, $filterCall, $prio, $numVars);
+
+        return $this;
+    }
+
+    /**
+     * Get added actions
+     *
+     * @return array
+     */
+    public function getAddedActions()
+    {
+        return $this->actions;
+    }
+
+    /**
+     * add
+     *
+     * @param string   $filterName
+     * @param callback $filterCall
+     * @param int      $prio
+     * @param int      $numVars
+     *
+     * @return Object
+     */
+    private function add($filterName, $filterCall, $prio, $numVars)
+    {
+        $data             = new \stdClass();
+        $data->filtername = $filterName;
+        $data->callback   = $filterCall;
+        $data->prio       = $prio;
+        $data->numvars    = $numVars;
+
+        return $data;
     }
 
     /* -------- */
