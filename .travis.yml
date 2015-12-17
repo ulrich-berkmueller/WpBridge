@@ -2,7 +2,6 @@ language: php
 
 php:
   - 5.4
-  - 5.5.9
   - 5.5
   - 5.6
   - 7.0
@@ -15,16 +14,12 @@ env:
 
 matrix:
   include:
-    - php: 5.5.9
+    - php: 5.4
       env: setup=lowest
-    - php: 5.5.9
+    - php: 5.4
       env: setup=stable
   allow_failures:
-    - env: setup=lowest
-    - env: setup=stable
-    - php: 7.0
     - php: nightly
-    - php: hhvm
   fast_finish: true
 
 sudo: false
