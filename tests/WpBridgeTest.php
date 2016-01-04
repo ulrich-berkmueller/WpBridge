@@ -1,7 +1,7 @@
 <?php
-namespace Gwa\Wordpress\MockeryWpBridge\Tests;
+namespace Gwa\Wordpress\WpBridge\Tests;
 
-use Gwa\Wordpress\MockeryWpBridge\WpBridge;
+use Gwa\Wordpress\WpBridge\WpBridge;
 
 class WpBridgeTest extends \PHPUnit_Framework_TestCase
 {

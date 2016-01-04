@@ -1,8 +1,8 @@
 <?php
-namespace Gwa\Wordpress\MockeryWpBridge\Tests;
+namespace Gwa\Wordpress\WpBridge\Tests;
 
-use Gwa\Wordpress\MockeryWpBridge\Traits\WpBridgeTrait;
-use Gwa\Wordpress\MockeryWpBridge\MockeryWpBridge;
+use Gwa\Wordpress\WpBridge\Traits\WpBridgeTrait;
+use Gwa\Wordpress\WpBridge\MockeryWpBridge;
 
 class WpBridgeTraitTest extends \PHPUnit_Framework_TestCase
 {
@@ -12,7 +12,7 @@ class WpBridgeTraitTest extends \PHPUnit_Framework_TestCase
     {
         $this->setWpBridge(new MockeryWpBridge());
 
-        $this->assertInstanceOf('Gwa\Wordpress\MockeryWpBridge\Contracts\WpBridgeInterface', $this->getWpBridge());
+        $this->assertInstanceOf('Gwa\Wordpress\WpBridge\Contracts\WpBridgeInterface', $this->getWpBridge());
     }
 
     public function testTraitSetWpBridgeOutsideAClass()
@@ -21,7 +21,7 @@ class WpBridgeTraitTest extends \PHPUnit_Framework_TestCase
 
         $outside->setWpBridge(new MockeryWpBridge());
 
-        $this->assertInstanceOf('Gwa\Wordpress\MockeryWpBridge\Contracts\WpBridgeInterface', $outside->getWpBridge());
+        $this->assertInstanceOf('Gwa\Wordpress\WpBridge\Contracts\WpBridgeInterface', $outside->getWpBridge());
 
         (new TestClass())->setWpBridge(new MockeryWpBridge())->init();
     }
@@ -33,6 +33,6 @@ class TestClass extends \PHPUnit_Framework_TestCase
 
     public function init()
     {
-        $this->assertInstanceOf('Gwa\Wordpress\MockeryWpBridge\Contracts\WpBridgeInterface', $this->getWpBridge());
+        $this->assertInstanceOf('Gwa\Wordpress\WpBridge\Contracts\WpBridgeInterface', $this->getWpBridge());
     }
 }

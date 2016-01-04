@@ -1,17 +1,18 @@
 {
-    "name"       : "gwa/mockery-wp-bridge",
+    "name"       : "gwa/wp-bridge",
     "type"       : "library",
-    "description": "MockeryWpBridge is a simple bridge to mock all wordpress function.",
+    "description": "WpBridge is a simple bridge to mock all wordpress function.",
     "keywords"   : [
         "wordpress",
+        "bridge",
         "mock",
         "mockery"
     ],
     "license"    : "MIT",
-    "homepage"   : "https://github.com/gwa/MockeryWpBridge",
+    "homepage"   : "https://github.com/gwa/WpBridge",
     "support"    : {
-        "issues"      : "https://github.com/gwa/MockeryWpBridge/issues",
-        "source"      : "https://github.com/gwa/MockeryWpBridge"
+        "issues"      : "https://github.com/gwa/WpBridge/issues",
+        "source"      : "https://github.com/gwa/WpBridge"
     },
     "authors"    : [
         {
@@ -21,34 +22,29 @@
         }
     ],
     "require": {
-        "php"                                          : ">=5.4.0",
-        "mockery/mockery"                              : "~0.9.4"
+        "php"                                   : ">=5.4.0",
+        "mockery/mockery"                       : "~0.9.4"
     },
     "require-dev": {
-        "fabpot/php-cs-fixer"                          : "~1.10",
-        "phpunit/phpunit"                              : "~4.8.9",
-        "scrutinizer/ocular"                           : "~1.1"
+        "fabpot/php-cs-fixer"                   : "~1.11",
+        "phpunit/phpunit"                       : "~4.8.9",
+        "scrutinizer/ocular"                    : "~1.3"
     },
     "autoload": {
         "psr-4": {
-            "Gwa\\Wordpress\\MockeryWpBridge\\"        : "src/Gwa/"
+            "Gwa\\Wordpress\\WpBridge\\"        : "src/Gwa/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Gwa\\Wordpress\\MockeryWpBridge\\Tests\\" : "tests/"
+            "Gwa\\Wordpress\\WpBridge\\Tests\\" : "tests/"
         }
     },
     "extra": {
         "branch-alias": {
-            "dev-master"                               : "1.2.0-dev"
+            "dev-master"                        : "1.2.0-dev"
         }
     },
-    "scripts": {
-        "test"                                         : "phpunit",
-        "check-cs"                                     : "php-cs-fixer.phar fix -v --dry-run",
-        "fix-cs"                                       : "php-cs-fixer.phar fix"
-    },
-    "minimum-stability"                                : "dev",
-    "prefer-stable"                                    : true
+    "minimum-stability"                         : "dev",
+    "prefer-stable"                             : true
 }

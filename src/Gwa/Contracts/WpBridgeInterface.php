@@ -1,5 +1,5 @@
 <?php
-namespace Gwa\Wordpress\MockeryWpBridge\Contracts;
+namespace Gwa\Wordpress\WpBridge\Contracts;
 
 interface WpBridgeInterface
 {

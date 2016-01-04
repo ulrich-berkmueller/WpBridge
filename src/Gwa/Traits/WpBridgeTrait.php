@@ -1,22 +1,22 @@
 <?php
-namespace Gwa\Wordpress\MockeryWpBridge\Traits;
+namespace Gwa\Wordpress\WpBridge\Traits;
 
-use Gwa\Wordpress\MockeryWpBridge\Contracts\WpBridgeInterface;
+use Gwa\Wordpress\WpBridge\Contracts\WpBridgeInterface;
 
 /**
- * Trait to be used by all classes that use MockeryWpBridge
+ * Trait to be used by all classes that use WpBridge
  */
 trait WpBridgeTrait
 {
     /**
-     * MockeryWpBridge instance.
+     * WpBridge instance.
      *
-     * @var \Gwa\Wordpress\MockeryWpBridge\Contracts\WpBridgeInterface $wpbridge
+     * @var \Gwa\Wordpress\WpBridge\Contracts\WpBridgeInterface $wpbridge
      */
     private $wpbridge;
 
     /**
-     * Set MockeryWpBridge.
+     * Set WpBridge.
      *
      * @param WpBridgeInterface $wpbridge
      */
@@ -28,7 +28,7 @@ trait WpBridgeTrait
     }
 
     /**
-     * Get MockeryWpBridge.
+     * Get WpBridge.
      *
      * @return WpBridge
      */

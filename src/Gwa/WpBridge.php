@@ -1,7 +1,7 @@
 <?php
-namespace Gwa\Wordpress\MockeryWpBridge;
+namespace Gwa\Wordpress\WpBridge;
 
-use Gwa\Wordpress\MockeryWpBridge\Contracts\WpBridgeInterface;
+use Gwa\Wordpress\WpBridge\Contracts\WpBridgeInterface;
 
 /**
  * Allows us to use a class to call methods in the global namespace.
@@ -18,8 +18,9 @@ class WpBridge implements WpBridgeInterface
      * Magic call on all camel wordpress functions.
      *
      * @param string $function
+     * @param array  $args
      *
-     * @return array
+     * @return mixed
      */
     public function __call($function, $args)
     {

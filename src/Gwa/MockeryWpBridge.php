@@ -1,7 +1,7 @@
 <?php
-namespace Gwa\Wordpress\MockeryWpBridge;
+namespace Gwa\Wordpress\WpBridge;
 
-use Gwa\Wordpress\MockeryWpBridge\Contracts\WpBridgeInterface;
+use Gwa\Wordpress\WpBridge\Contracts\WpBridgeInterface;
 use Mockery;
 
 class MockeryWpBridge implements WpBridgeInterface
@@ -33,8 +33,6 @@ class MockeryWpBridge implements WpBridgeInterface
      * @var array
      */
     private $actions = [];
-
-    /* -------- */
 
     /**
      * Add a shortcode.
@@ -179,8 +177,6 @@ class MockeryWpBridge implements WpBridgeInterface
 
         return $data;
     }
-
-    /* -------- */
 
     public function __call($function, $args)
     {

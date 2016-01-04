@@ -1,17 +1,17 @@
 <?php
-namespace Gwa\Wordpress\MockeryWpBridge\Contracts;
+namespace Gwa\Wordpress\WpBridge\Contracts;
 
-interface MockeryWpBridgeAwareInterface
+interface WpBridgeAwareInterface
 {
     /**
-     * Set MockeryWpBridge.
+     * Set WpBridge.
      *
      * @param WpBridgeInterface $wpbridge
      */
     public function setWpBridge(WpBridgeInterface $wpbridge);
 
     /**
-     * Get MockeryWpBridge.
+     * Get WpBridge.
      *
      * @return WpBridge
      */
