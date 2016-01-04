@@ -1,4 +1,4 @@
-# MockeryWpBridge
+# WpBridge
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/gwa/mockery-wp-bridge.svg?style=flat-square)](https://packagist.org/packages/gwa/mockery-wp-bridge)
 [![Total Downloads](https://img.shields.io/packagist/dt/gwa/mockery-wp-bridge.svg?style=flat-square)](https://packagist.org/packages/gwa/mockery-wp-bridge)
@@ -6,24 +6,24 @@
 
 ## Master
 
-[![Build Status](https://img.shields.io/travis/gwa/MockeryWpBridge/master.svg?style=flat-square)](https://travis-ci.org/gwa/MockeryWpBridge)
-[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/gwa/MockeryWpBridge.svg?style=flat-square)](https://scrutinizer-ci.com/g/gwa/MockeryWpBridge/code-structure)
-[![Quality Score](https://img.shields.io/scrutinizer/g/gwa/MockeryWpBridge.svg?style=flat-square)](https://scrutinizer-ci.com/g/gwa/MockeryWpBridge)
+[![Build Status](https://img.shields.io/travis/gwa/WpBridge/master.svg?style=flat-square)](https://travis-ci.org/gwa/WpBridge)
+[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/gwa/WpBridge.svg?style=flat-square)](https://scrutinizer-ci.com/g/gwa/WpBridge/code-structure)
+[![Quality Score](https://img.shields.io/scrutinizer/g/gwa/WpBridge.svg?style=flat-square)](https://scrutinizer-ci.com/g/gwa/WpBridge)
 
 ## Install
 
 Via Composer
 
 ``` bash
-$ composer require gwa/mockery-wp-bridge
+$ composer require gwa/wp-bridge
 ```
 
 ## Usage
 
-First init ```MockeryWpBridge``` class.
+First init ```WpBridge``` class.
 
 ```php
-$bridge = new \Gwa\Wordpress\MockeryWpBridge\MockeryWpBridge();
+$bridge = new \Gwa\Wordpress\WpBridge\WpBridge();
 ```
 
 Now it allows us to use a class to call methods in the global namespace.
@@ -40,7 +40,7 @@ $bridge->wpGetAttachmentImageSrc(...);
 Or you like to use a trait, than set ```WpBridgeTrait``` in a class.
 
 ```php
-use Gwa\Wordpress\MockeryWpBridge\Traits\WpBridgeTrait;
+use Gwa\Wordpress\WpBridge\Traits\WpBridgeTrait;
 
 class TestClass
 {
