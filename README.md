@@ -1,7 +1,7 @@
 # WpBridge
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/gwa/mockery-wp-bridge.svg?style=flat-square)](https://packagist.org/packages/gwa/mockery-wp-bridge)
-[![Total Downloads](https://img.shields.io/packagist/dt/gwa/mockery-wp-bridge.svg?style=flat-square)](https://packagist.org/packages/gwa/mockery-wp-bridge)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/gwa/wp-bridge.svg?style=flat-square)](https://packagist.org/packages/gwa/wp-bridge)
+[![Total Downloads](https://img.shields.io/packagist/dt/gwa/wp-bridge.svg?style=flat-square)](https://packagist.org/packages/gwa/wp-bridge)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 
 ## Master
