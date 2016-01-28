@@ -1,6 +1,7 @@
 <?php
 namespace Gwa\Wordpress\WpBridge;
 
+use stdClass;
 use Gwa\Wordpress\WpBridge\Contracts\WpBridgeInterface;
 use Mockery;
 
@@ -33,6 +34,13 @@ class MockeryWpBridge implements WpBridgeInterface
      * @var array
      */
     private $actions = [];
+
+    /**
+     * All theme supports.
+     *
+     * @var array
+     */
+    private $themeSupport = [];
 
     /**
      * Add a shortcode.
@@ -157,6 +165,35 @@ class MockeryWpBridge implements WpBridgeInterface
         return $this->actions;
     }
 
+    /**
+     * Wordpress mock on add_theme_support func.
+     *
+     * @param string $feature
+     * @param array  $arguments
+     *
+     * @return self
+     */
+    public function addThemeSupport($feature, $arguments)
+    {
+        $data            = new stdClass();
+        $data->feature   = $feature;
+        $data->arguments = $arguments;
+
+        $this->themeSupport[] = $data;
+
+        return $this;
+    }
+
+    /**
+     * Get added theme supports
+     *
+     * @return array
+     */
+    public function getAddedThemeSupport()
+    {
+        return $this->themeSupport;
+    }
+
     public function mock()
     {
         if (!isset($this->mock)) {
@@ -183,7 +220,7 @@ class MockeryWpBridge implements WpBridgeInterface
      */
     private function add($filterName, $filterCall, $prio, $numVars)
     {
-        $data             = new \stdClass();
+        $data             = new stdClass();
         $data->filtername = $filterName;
         $data->callback   = $filterCall;
         $data->prio       = $prio;
