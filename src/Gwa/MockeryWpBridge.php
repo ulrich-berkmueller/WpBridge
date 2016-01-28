@@ -157,6 +157,20 @@ class MockeryWpBridge implements WpBridgeInterface
         return $this->actions;
     }
 
+    public function mock()
+    {
+        if (!isset($this->mock)) {
+            $this->mock = Mockery::mock('WpBridge');
+        }
+
+        return $this->mock;
+    }
+
+    public function __call($function, $args)
+    {
+        return call_user_func_array([$this->mock(), $function], $args);
+    }
+
     /**
      * add
      *
@@ -176,19 +190,5 @@ class MockeryWpBridge implements WpBridgeInterface
         $data->numvars    = $numVars;
 
         return $data;
-    }
-
-    public function __call($function, $args)
-    {
-        return call_user_func_array([$this->mock, $function], $args);
-    }
-
-    public function mock()
-    {
-        if (!isset($this->mock)) {
-            $this->mock = Mockery::mock('WpBridge');
-        }
-
-        return $this->mock;
     }
 }
