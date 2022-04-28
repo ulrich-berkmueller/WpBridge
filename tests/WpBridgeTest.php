@@ -2,10 +2,11 @@
 namespace Gwa\Wordpress\WpBridge\Tests;
 
 use Gwa\Wordpress\WpBridge\WpBridge;
+use PHPUnit\Framework\TestCase;
 
-class WpBridgeTest extends \PHPUnit_Framework_TestCase
+class WpBridgeTest extends TestCase
 {
-    public function testCamelToUnderscore()
+    public function testCamelToUnderscore(): void
     {
         $bridge = new WpBridge();
         $this->assertEquals('foo_bar', $bridge->camelToUnderscore('fooBar'));
@@ -14,14 +15,14 @@ class WpBridgeTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('is_404', $bridge->camelToUnderscore('is404'));
     }
 
-    public function testCallGlobalFunction()
+    public function testCallGlobalFunction(): void
     {
         $bridge = new WpBridge();
         $result = $bridge->strRepeat('##', 2);
         $this->assertEquals('####', $result);
 
         $result = $bridge->strSplit('foobar', 2);
-        $this->assertInternalType('array', $result);
+        $this->assertIsArray($result);
         $this->assertEquals('fo', $result[0]);
         $this->assertEquals('ob', $result[1]);
         $this->assertEquals('ar', $result[2]);

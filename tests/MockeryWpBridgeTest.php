@@ -2,16 +2,17 @@
 namespace Gwa\Wordpress\WpBridge\Tests;
 
 use Gwa\Wordpress\WpBridge\MockeryWpBridge;
+use PHPUnit\Framework\TestCase;
 
-class MockeryWpBridgeTest extends \PHPUnit_Framework_TestCase
+class MockeryWpBridgeTest extends TestCase
 {
-    public function testGetMock()
+    public function testGetMock(): void
     {
         $bridge = new MockeryWpBridge();
         $this->assertInstanceOf('\Mockery_0__WpBridge', $bridge->mock());
     }
 
-    public function testMockFunction()
+    public function testMockFunction(): void
     {
         $bridge = new MockeryWpBridge();
         $bridge->mock()
@@ -22,7 +23,7 @@ class MockeryWpBridgeTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('baz', $result);
     }
 
-    public function testAddShortCode()
+    public function testAddShortCode(): void
     {
         $bridge = new MockeryWpBridge();
         $bridge->addShortcode('testshortcode', function() {
@@ -33,7 +34,7 @@ class MockeryWpBridgeTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(false, $bridge->hasShortcode('notestshortcode'));
     }
 
-    public function testGetShortCode()
+    public function testGetShortCode(): void
     {
         $func =  function() {
             return 'test';
@@ -46,14 +47,14 @@ class MockeryWpBridgeTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(null, $bridge->getShortcodeCallback('notestshortcode'));
     }
 
-    public function testGetText()
+    public function testGetText(): void
     {
         $bridge = new MockeryWpBridge();
 
         $this->assertEquals('test', $bridge->__('test', 'MockTest'));
     }
 
-    public function testAddFilter()
+    public function testAddFilter(): void
     {
         $bridge = new MockeryWpBridge();
         $bridge->addFilter('network_admin_url', [$this, 'testGetText'], 1, 1);
@@ -64,24 +65,24 @@ class MockeryWpBridgeTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(1, $filters[0]->prio);
         $this->assertEquals(1, $filters[0]->numvars);
         $this->assertEquals('network_admin_url', $filters[0]->filtername);
-        $this->assertInternalType('array', $filters[0]->callback);
+        $this->assertIsArray($filters[0]->callback);
     }
 
-    public function testAddAction()
+    public function testAddAction(): void
     {
         $bridge = new MockeryWpBridge();
         $bridge->addAction('network_admin_url', [$this, 'testGetText'], 1, 1);
 
         $actions = $bridge->getAddedActions();
 
-        $this->assertEquals(1, count($actions));
+        $this->assertCount(1, $actions);
         $this->assertEquals(1, $actions[0]->prio);
         $this->assertEquals(1, $actions[0]->numvars);
         $this->assertEquals('network_admin_url', $actions[0]->filtername);
-        $this->assertInternalType('array', $actions[0]->callback);
+        $this->assertIsArray($actions[0]->callback);
     }
 
-    public function testShortcodeAtts()
+    public function testShortcodeAtts(): void
     {
         $atts = [
             'id' => ''

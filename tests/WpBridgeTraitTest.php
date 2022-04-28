@@ -3,19 +3,20 @@ namespace Gwa\Wordpress\WpBridge\Tests;
 
 use Gwa\Wordpress\WpBridge\Traits\WpBridgeTrait;
 use Gwa\Wordpress\WpBridge\MockeryWpBridge;
+use PHPUnit\Framework\TestCase;
 
-class WpBridgeTraitTest extends \PHPUnit_Framework_TestCase
+class WpBridgeTraitTest extends TestCase
 {
     use WpBridgeTrait;
 
-    public function testTraitSetWpBridge()
+    public function testTraitSetWpBridge(): void
     {
         $this->setWpBridge(new MockeryWpBridge());
 
         $this->assertInstanceOf('Gwa\Wordpress\WpBridge\Contracts\WpBridgeInterface', $this->getWpBridge());
     }
 
-    public function testTraitSetWpBridgeOutsideAClass()
+    public function testTraitSetWpBridgeOutsideAClass(): void
     {
         $outside = new TestClass();
 
@@ -27,11 +28,11 @@ class WpBridgeTraitTest extends \PHPUnit_Framework_TestCase
     }
 }
 
-class TestClass extends \PHPUnit_Framework_TestCase
+class TestClass extends TestCase
 {
     use WpBridgeTrait;
 
-    public function init()
+    public function init(): void
     {
         $this->assertInstanceOf('Gwa\Wordpress\WpBridge\Contracts\WpBridgeInterface', $this->getWpBridge());
     }

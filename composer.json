@@ -22,28 +22,28 @@
         }
     ],
     "require": {
-        "php"                                   : ">=5.4.0",
-        "mockery/mockery"                       : "^0.9"
+        "php": ">=7.4",
+        "mockery/mockery": "^1.5"
     },
     "require-dev": {
-        "fabpot/php-cs-fixer"                   : "^1.11",
-        "phpunit/phpunit"                       : "^4.8"
+        "phpunit/phpunit": "^9.5",
+        "friendsofphp/php-cs-fixer": "^3.8"
     },
     "autoload": {
         "psr-4": {
-            "Gwa\\Wordpress\\WpBridge\\"        : "src/Gwa/"
+            "Gwa\\Wordpress\\WpBridge\\": "src/Gwa/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Gwa\\Wordpress\\WpBridge\\Tests\\" : "tests/"
+            "Gwa\\Wordpress\\WpBridge\\Tests\\": "tests/"
         }
     },
     "extra": {
         "branch-alias": {
-            "dev-master"                        : "2.2-dev"
+            "dev-master": "2.2-dev"
         }
     },
-    "minimum-stability"                         : "dev",
-    "prefer-stable"                             : true
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
