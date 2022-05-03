@@ -41,7 +41,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "2.2-dev"
+            "dev-fix-php-8.1-compatiblity": "2.3-dev"
         }
     },
     "minimum-stability": "dev",
